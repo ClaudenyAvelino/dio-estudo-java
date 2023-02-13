@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/dio-estudo-java.iml" filepath="$PROJECT_DIR$/.idea/dio-estudo-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-documentacao/java-documentacao.iml" filepath="$PROJECT_DIR$/java-documentacao/java-documentacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-metodos/java-metodos.iml" filepath="$PROJECT_DIR$/java-metodos/java-metodos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-terminal/java-terminal.iml" filepath="$PROJECT_DIR$/java-terminal/java-terminal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-variaveis/java-variaveis.iml" filepath="$PROJECT_DIR$/java-variaveis/java-variaveis.iml" />
+    </modules>
+  </component>
+</project>
