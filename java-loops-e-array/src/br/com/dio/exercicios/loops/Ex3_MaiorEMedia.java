@@ -16,13 +16,10 @@ public class Ex3_MaiorEMedia {
         do {
             System.out.println("Numero");
             numero = entrada.nextInt();
-
             soma = soma + numero;
 
             if (numero > maio) maio = numero;
-
                 cont = cont + 1;
-
 
         }while (cont < 5);
         System.out.println("Maior: "+maio);
