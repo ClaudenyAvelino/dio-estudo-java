@@ -1,6 +1,6 @@
 package br.com.dio.exercicios.listaDuplamenteEncadeada;
 
-public class NoDuplo {
+public class NoDuplo<T> {
     private T conteudo;
     private NoDuplo<T> noProximo;
     private NoDuplo<T> noPrevio;
