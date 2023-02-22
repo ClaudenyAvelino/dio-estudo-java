@@ -2,17 +2,16 @@ package br.com.dio.exercicios.arvoreBinaria;
 
 public class BinNo<T extends Comparable<T>> {
 
-        private T conteudo;
-        private BinNo<T> noEsq;
-        private BinNo<T> noDir;
-
-
-    public BinNo() {
-    }
+    private T conteudo;
+    private BinNo<T> noEsq;
+    private BinNo<T> noDir;
 
     public BinNo(T conteudo) {
         this.conteudo = conteudo;
         noEsq = noDir = null;
+    }
+
+    public BinNo() {
     }
 
     public T getConteudo() {
