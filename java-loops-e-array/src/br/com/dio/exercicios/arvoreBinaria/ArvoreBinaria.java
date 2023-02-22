@@ -68,24 +68,51 @@ public class ArvoreBinaria<T extends Comparable<T>>{
         }
     }
 
-    public remover(T conteudo){
+    public void remover(T conteudo){
         try {
             BinNo<T> atual = this.rais;
             BinNo<T> pai = null;
             BinNo<T> filho = null;
             BinNo<T> temp = null;
 
-            while (atual != null && !atual.getConteudo().equals(conteudo)){
+            while (atual != null && !atual.getConteudo().equals(conteudo)) {
                 pai = atual;
-                if (conteudo.compareTo(atual.getConteudo()) < 0){
-                        atual = atual.getNoEsq();
-                }else {
+                if (conteudo.compareTo(atual.getConteudo()) < 0) {
+                    atual = atual.getNoEsq();
+                } else {
                     atual = atual.getNoDir();
                 }
             }
-            if (atual == null){
+            if (atual == null) {
                 System.out.println("Conteudo não encontrado. Bloco tri");
             }
+
+            if (pai == null) {
+                if (atual.getNoDir() == null) {
+                    this.rais = atual.getNoEsq();
+                } else if (atual.getNoEsq() == null) {
+                    this.rais = atual.getNoDir();
+                } else {
+                    for (temp = atual, filho = atual.getNoEsq();
+                         filho.getNoDir() != null;
+                         temp = filho, filho = filho.getNoEsq()
+                    ) {
+                        if (filho != atual.getNoEsq()) {
+                            temp.setNoDir(filho.getNoEsq());
+                            filho.setNoEsq(rais.getNoEsq());
+                        }
+                    }
+                    filho.setNoDir(rais.getNoDir());
+                    rais = filho;
+                }
+            }else if(atual.getNoDir() == null){
+
+            }else if(atual.getNoEsq() == null){
+
+            }else {
+
+            }
+
         }catch (NullPointerException erro){
             System.out.println("Conteudo não encontrado. Bloco catch");
         }
